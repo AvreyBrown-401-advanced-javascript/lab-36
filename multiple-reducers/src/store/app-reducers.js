@@ -1,11 +1,11 @@
-let initialState = { foo: 'bar' };
+let initialState = { name: 'John' };
 
 export default (state = initialState, action) => {
   let { type, payload } = action;
 
   switch (type) {
     case 'CHANGE':
-      return { foo: Math.random() };
+      return { name: payload || Math.random() };
 
     default:
       return state;

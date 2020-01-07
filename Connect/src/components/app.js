@@ -8,7 +8,7 @@ class App extends React.Component {
 
   render() {
     return (
-      <div onClick={() => this.props.handleChange(15)}>
+      <div onClick={() => this.props.handleChange()}>
         {this.props.stuff.foo}
       </div>
     );
@@ -16,7 +16,7 @@ class App extends React.Component {
 }
 
 const mapStateToProps = state => ({
-  stuff: state.foo
+  stuff: state.someStuff
 });
 
 const mapDispatchToProps = (dispatch, getState) => ({
